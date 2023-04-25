@@ -18,7 +18,7 @@ function CardUser({user, deleteUser, editUser, setFormVisible,reset, setModEdit 
   }
   return (
     
-      <article className='min-w-[320px] min-h-[230px] max-w-[380px] max-h-[275px] bg-white border-2 border-gray-200 p-3 ' >
+      <article className='min-w-[320px] min-h-[230px] max-w-[320px] max-h-[275px] bg-white border-2 border-gray-200 p-3 ' >
         <h1 className='text-[25px] font-[600] '>{user.first_name + user.last_name}</h1>
         <section className='grid grid-cols-2  '>
         <article className='grid place-content-center justify-start pt-2'>

@@ -37,7 +37,7 @@ function UsersForm({
     <div
       className={` ${
         formVisible ? "visible" : "invisible"
-      } absolute  min-w-full min-h-screen bg-black/40 grid place-content-center  `}
+      } absolute  min-w-full h-screen  bg-black/40 grid place-content-center  `}
     >
       <form
         onSubmit={handleSubmit(submit)}
@@ -49,18 +49,19 @@ function UsersForm({
           className="bx bx-x absolute right-0 p-2 text-[25px] cursor-pointer"
           onClick={handleX}
         ></i>
-        <h2 className="font-[800] text-[23px]">
+        <h2 className="font-[800] text-[23px] max-w-fit">
           {modEdit ? "Edit user" : "New User"}
         </h2>
         <p className="  right-0 m-auto text-[12px] text-red-600">{errors.first_name?.message}</p>
         <p className="  right-0 m-auto text-[12px] text-red-600">{errors.last_name?.message}</p>
-        <div className=" flex gap-2 h-[40px] items-center">
+        <div className=" flex gap-2 h-[40px] items-center max-w-fit">
             <label htmlFor="first_name">
               <i className="bx bxs-user"></i>
             </label>
 
+            <section className="grid grid-cols-2 gap-2">
             <input
-              className="border-[1px] border-[#C3C1C1] max-w-[30%]  bg-[#F9FAFC] placeholder:text-[#BDBDBD] p-1 px-2 rounded-md hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg"
+              className="border-[1px] border-[#C3C1C1]   bg-[#F9FAFC] placeholder:text-[#BDBDBD] p-1 px-2 rounded-md hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg "
               type="text"
               name="first_name"
               id="first_name"
@@ -82,7 +83,7 @@ function UsersForm({
              
             />
             <input
-              className=" max-w-[30%] bg-[#F9FAFC] p-1 px-2 rounded-md  border-[1px] border-[#C3C1C1] placeholder:text-[#BDBDBD] hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg"
+              className="  bg-[#F9FAFC] p-1 px-2 rounded-md  border-[1px] border-[#C3C1C1] placeholder:text-[#BDBDBD] hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg"
               type="text"
               name="last_name"
               placeholder="last name"
@@ -101,12 +102,13 @@ function UsersForm({
               }
               })}
             />
+            </section>
           
         </div>
         <p className="block  right-0 m-auto text-[12px] text-red-600">{errors.email?.message}</p>
-        <div className="flex gap-2  items-center h-[40px]">
+        <div className="flex gap-2  items-center h-[40px] max-w-full">
           <i className="bx bxs-envelope"></i>
-          <input className=" px-2 rounded-md p-1 bg-[#F9FAFC] border-[1px] border-[#C3C1C1] min-w-[60%] placeholder:text-[#BDBDBD] hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg"
+          <input className=" px-2 rounded-md p-1 bg-[#F9FAFC] border-[1px] border-[#C3C1C1] min-w-[90%] placeholder:text-[#BDBDBD] hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg"
             type="email"
             name="email"
             id="email"
@@ -130,9 +132,9 @@ function UsersForm({
           
         </div>
         <p className="block  right-0 m-auto text-[12px] text-red-600">{errors.password?.message}</p>
-        <div className="flex gap-2  items-center h-[40px]">
+        <div className="flex gap-2  items-center h-[40px] max-w-full">
           <i className="bx bxs-lock-alt"></i>
-          <input className="bg-none bg-[#F9FAFC] border-[1px] border-[#C3C1C1] min-w-[60%] text-[#BDBDBD] p-1 px-2 rounded-md hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg focus:text-black"
+          <input className="bg-none bg-[#F9FAFC] border-[1px] border-[#C3C1C1] min-w-[90%] text-[#BDBDBD] p-1 px-2 rounded-md hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg focus:text-black"
             type="password"
             name="password"
             id="password"
@@ -154,9 +156,9 @@ function UsersForm({
           />
         </div>
         <p className="block  right-0 m-auto text-[12px] text-red-600">{errors.birthday?.message}</p>
-        <div className="flex gap-2  items-center h-[40px]">
+        <div className="flex gap-2  items-center h-[40px] max-w-full">
           <i className="bx bxs-cake"></i>
-          <input className="px-2 rounded-md p-1 bg-[#F9FAFC] border-[1px] border-[#C3C1C1] min-w-[60%] text-[#BDBDBD] hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg focus:text-black"
+          <input className="px-2 rounded-md p-1 bg-[#F9FAFC] border-[1px] border-[#C3C1C1] min-w-[90%] text-[#BDBDBD] hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg focus:text-black"
             type="date"
             name="birthday"
             id="birthday"
@@ -166,9 +168,9 @@ function UsersForm({
           />
         </div>
         <p className="block  right-0 m-auto text-[12px] text-red-600">{errors.image_url?.message}</p>
-        <div className="flex gap-2  items-center h-[40px]">
+        <div className="flex gap-2  items-center h-[40px] max-w-full">
           <i className="bx bx-image-add"></i>
-          <input className="px-2 rounded-md p-1 bg-[#F9FAFC] border-[1px] border-[#C3C1C1] min-w-[60%] placeholder:text-[#BDBDBD] focus:outline-none focus:border-black focus-within:shadow-lg hover:border-teal-600"
+          <input className="px-2 rounded-md p-1 bg-[#F9FAFC] border-[1px] border-[#C3C1C1] min-w-[90%] placeholder:text-[#BDBDBD] focus:outline-none focus:border-black focus-within:shadow-lg hover:border-teal-600"
             type="url"
             name="image_url"
             id="image_url"

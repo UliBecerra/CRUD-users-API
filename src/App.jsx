@@ -65,7 +65,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App min-h-screen min-w-full bg-white font-body ">
+    <div className="relative max-h-screen max-w-full bg-white font-body ">
       <UsersForm
         postUser={postUser}
         editUser={editUser}
