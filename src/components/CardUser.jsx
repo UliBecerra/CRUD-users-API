@@ -27,8 +27,8 @@ function CardUser({user, deleteUser, editUser, setFormVisible,reset, setModEdit 
           <h2 className=' font-semibold text-gray-400'>BIRTHDAY</h2>
           <h2 className=' '>{user.birthday ? user.birthday : 'Falta menos de un año...'}</h2>
         </article>
-        <div className='p-4 '> 
-        {user.image_url ? <img className='rounded-full' src={user.image_url} alt="" /> : <img className='rounded-full' src='https://static.thenounproject.com/png/4604295-200.png' alt="" />}
+        <div className='p-0 h-[100px] flex justify-center  aspect-square'> 
+        {user.image_url ? <img className='rounded-full ' src={user.image_url} alt="" /> : <img className='rounded-full' src='https://static.thenounproject.com/png/4604295-200.png' alt="" />}
         </div>
         
         </section>
