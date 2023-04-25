@@ -42,7 +42,7 @@ function UsersForm({
       <form
         onSubmit={handleSubmit(submit)}
         className={
-          "relative border-2 border-gray-400 bg-white max-w-[310px] max-h-[400px] grid gap-1 p-3"
+          "relative border-2 border-gray-400 bg-white max-w-[315px] max-h-[400px] grid gap-1 p-3"
         }
       >
         <i

@@ -82,7 +82,7 @@ function App() {
         <h1 className="text-[50px] font-[800]">Usuarios</h1>
 
         <button
-          className="flex items-center bg-[#555A88] text-white h-[45px] px-10"
+          className="flex items-center bg-[#555A88] text-white h-[45px] px-6"
           onClick={() => {
             setFormVisible((show) => !show);
             setModEdit(false);

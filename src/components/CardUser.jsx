@@ -27,12 +27,12 @@ function CardUser({user, deleteUser, editUser, setFormVisible,reset, setModEdit 
           <h2 className=' font-semibold text-gray-400'>BIRTHDAY</h2>
           <h2 className=' '>{user.birthday ? user.birthday : 'Falta menos de un año...'}</h2>
         </article>
-        <div className='p-0 h-[100px] flex justify-center  aspect-square'> 
+        <div className='p-0 h-[120px] flex justify-around aspect-square '> 
         {user.image_url ? <img className='rounded-full ' src={user.image_url} alt="" /> : <img className='rounded-full' src='https://static.thenounproject.com/png/4604295-200.png' alt="" />}
         </div>
         
         </section>
-        <div className='flex justify-end gap-3'>
+        <div className="flex items-center justify-end px-10">
         <i className='bx bx-trash bg-[#D85D5D] h-[43px] text-[30px] text-white rounded-[4px] border-[1px] border-[#D93F3F] aspect-square grid place-content-center cursor-pointer' onClick={() => deleteUser(user.id)}></i>
         <i className='bx bx-pencil bg-[#F6F6F6] h-[43px] text-[30px] text-[#D3D3D3] rounded-[4px] border-[1px] border-[#BDBDBD] aspect-square grid place-content-center cursor-pointer' onClick={() =>clickEdit()}></i>
         </div>
