@@ -42,7 +42,7 @@ function UsersForm({
       <form
         onSubmit={handleSubmit(submit)}
         className={
-          "relative border-2 border-gray-400 bg-white max-w-[315px] max-h-[400px] grid gap-1 p-3"
+          "relative border-2 border-gray-400 bg-white max-w-[315px] max-h-[500px] grid gap-2 p-4 "
         }
       >
         <i
@@ -52,8 +52,7 @@ function UsersForm({
         <h2 className="font-[800] text-[23px] max-w-fit">
           {modEdit ? "Edit user" : "New User"}
         </h2>
-        <p className="  right-0 m-auto text-[12px] text-red-600">{errors.first_name?.message}</p>
-        <p className="  right-0 m-auto text-[12px] text-red-600">{errors.last_name?.message}</p>
+        
         <div className=" flex gap-2 h-[40px] items-center max-w-fit">
             <label htmlFor="first_name">
               <i className="bx bxs-user"></i>
@@ -82,6 +81,7 @@ function UsersForm({
               })}
              
             />
+            
             <input
               className="  bg-[#F9FAFC] p-1 px-2 rounded-md  border-[1px] border-[#C3C1C1] placeholder:text-[#BDBDBD] hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg"
               type="text"
@@ -90,7 +90,7 @@ function UsersForm({
               {...register("last_name", 
               {required: {
                 value:true,
-                message:'your must enter your first name'
+                message:'your must enter your last name'
               },
               minLength:{
                 value: 1,
@@ -103,9 +103,14 @@ function UsersForm({
               })}
             />
             </section>
+            
           
         </div>
-        <p className="block  right-0 m-auto text-[12px] text-red-600">{errors.email?.message}</p>
+        <div className="pl-6 grid grid-cols-2 gap-3">
+        <p className="  right-0 m-auto text-[12px] text-red-600">{errors.first_name?.message}</p>
+        <p className="  right-0 m-auto text-[12px] text-red-600">{errors.last_name?.message}</p>
+        </div>
+        
         <div className="flex gap-2  items-center h-[40px] max-w-full">
           <i className="bx bxs-envelope"></i>
           <input className=" px-2 rounded-md p-1 bg-[#F9FAFC] border-[1px] border-[#C3C1C1] min-w-[90%] placeholder:text-[#BDBDBD] hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg"
@@ -131,7 +136,7 @@ function UsersForm({
           />
           
         </div>
-        <p className="block  right-0 m-auto text-[12px] text-red-600">{errors.password?.message}</p>
+        <p className="block  right-0 m-auto text-[12px] text-red-600">{errors.email?.message}</p>
         <div className="flex gap-2  items-center h-[40px] max-w-full">
           <i className="bx bxs-lock-alt"></i>
           <input className="bg-none bg-[#F9FAFC] border-[1px] border-[#C3C1C1] min-w-[90%] text-[#BDBDBD] p-1 px-2 rounded-md hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg focus:text-black"
@@ -155,7 +160,8 @@ function UsersForm({
             })}
           />
         </div>
-        <p className="block  right-0 m-auto text-[12px] text-red-600">{errors.birthday?.message}</p>
+        <p className="block  right-0 m-auto text-[12px] text-red-600">{errors.password?.message}</p>
+        
         <div className="flex gap-2  items-center h-[40px] max-w-full">
           <i className="bx bxs-cake"></i>
           <input className="px-2 rounded-md p-1 bg-[#F9FAFC] border-[1px] border-[#C3C1C1] min-w-[90%] text-[#BDBDBD] hover:border-teal-600 focus:outline-none focus:border-black focus-within:shadow-lg focus:text-black"
@@ -167,7 +173,8 @@ function UsersForm({
             
           />
         </div>
-        <p className="block  right-0 m-auto text-[12px] text-red-600">{errors.image_url?.message}</p>
+        <p className="block  right-0 m-auto text-[12px] text-red-600">{errors.birthday?.message}</p>
+        
         <div className="flex gap-2  items-center h-[40px] max-w-full">
           <i className="bx bx-image-add"></i>
           <input className="px-2 rounded-md p-1 bg-[#F9FAFC] border-[1px] border-[#C3C1C1] min-w-[90%] placeholder:text-[#BDBDBD] focus:outline-none focus:border-black focus-within:shadow-lg hover:border-teal-600"
@@ -179,8 +186,9 @@ function UsersForm({
             
           />
         </div>
+        <p className="block  right-0 m-auto text-[12px] text-red-600">{errors.image_url?.message}</p>
         <button
-          className="text-white font-semibold bg-teal-600 max-w-[70%] rounded-md shadow-md h-[40px]"
+          className="text-white font-semibold bg-teal-600 max-w-[70%] rounded-md shadow-md h-[40px] mx-auto px-5 my-2"
           type="submit"
         >
           {modEdit ? "Upload user" : "Create user"}

@@ -78,11 +78,11 @@ function App() {
         errors={errors}
         defaultValues={defaultValues}
       />
-      <section className="flex justify-between items-center p-[5%]">
-        <h1 className="text-[50px] font-[800]">Usuarios</h1>
+      <section className="flex justify-between items-center p-5 md:p-20">
+        <h1 className=" text-[40px] md:text-[50px] font-[800]">Usuarios</h1>
 
         <button
-          className="flex items-center bg-[#555A88] text-white h-[45px] px-6"
+          className="flex items-center bg-[#555A88] text-white h-[40px] md:h-[45px] px-6"
           onClick={() => {
             setFormVisible((show) => !show);
             setModEdit(false);
